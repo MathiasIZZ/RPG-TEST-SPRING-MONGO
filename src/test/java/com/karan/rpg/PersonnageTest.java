@@ -33,6 +33,7 @@ public class PersonnageTest {
     private PersonnageService service;
 
     List<Personnage> personnages = new ArrayList<Personnage>();
+
     @BeforeEach
     public void setup() {
         closeable = MockitoAnnotations.openMocks(this);
@@ -53,7 +54,7 @@ public class PersonnageTest {
     @DisplayName("Devrait creer une instance de personnage")
     public void createNewPerso(){
         Personnage p = new Personnage("1","toto",100);
-        assertInstanceOf(Personnage.class,p);
+        assertInstanceOf(Personnage.class, p);
     }
 
     @Test

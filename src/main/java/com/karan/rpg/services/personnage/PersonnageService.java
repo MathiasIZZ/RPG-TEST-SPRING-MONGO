@@ -3,15 +3,19 @@ package com.karan.rpg.services.personnage;
 import com.karan.rpg.models.Personnage;
 import com.karan.rpg.repositories.PersonnageRepository;
 import com.karan.rpg.services.GenericService;
+import org.modelmapper.ModelMapper;
 
 import java.util.List;
 
 public class PersonnageService implements GenericService<Personnage> {
 
     private PersonnageRepository repository;
+    private ModelMapper mapper;
 
-    public PersonnageService(PersonnageRepository repository) {
+    public PersonnageService(PersonnageRepository repository, ModelMapper mapper) {
+
         this.repository = repository;
+        this.mapper = mapper;
     }
 
     @Override
